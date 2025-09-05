@@ -1,5 +1,13 @@
 AWS Capstone – EKS Multiregion Deployment 
 
+# AWS Capstone – EKS Multiregion Deployment 🚀
+
+[![Terraform](https://img.shields.io/badge/Terraform-v1.7+-623CE4?logo=terraform&logoColor=white)](https://www.terraform.io/)
+[![AWS](https://img.shields.io/badge/AWS-Cloud-orange?logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
+[![Kubernetes](https://img.shields.io/badge/Kubernetes-1.29-blue?logo=kubernetes&logoColor=white)](https://kubernetes.io/)
+[![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-2088FF?logo=github-actions&logoColor=white)](https://github.com/features/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 📌 Overview
 
 This project demonstrates a multi-region AWS deployment of a containerized microservice using:
@@ -22,7 +30,7 @@ This design supports high availability, cost optimization, and private communica
 The system is deployed across two AWS regions with Route 53 failover and GitHub Actions CI/CD.
 
 📂 Repository Structure
-
+'''
 aws-capstone-eks-multiregion/
 ├── terraform/
 │ ├── modules/
@@ -41,6 +49,7 @@ aws-capstone-eks-multiregion/
 ├── .github/workflows/ # CI/CD pipelines (GitHub Actions)
 └── docs/
 └── architecture.png
+'''
 
 ⚙️ Terraform Modules
 🔹 VPC Module
