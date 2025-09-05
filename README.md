@@ -22,27 +22,30 @@ This design supports high availability, cost optimization, and private communica
 
 🏗️ Architecture Diagram
 
+![Architecture](./docs/architecture.png)
+
 The system is deployed across two AWS regions with Route 53 failover and GitHub Actions CI/CD.
 
 📂 Repository Structure
+
 aws-capstone-eks-multiregion/
 ├── terraform/
-│   ├── modules/
-│   │   ├── vpc/        # VPC, subnets, route tables, VPC endpoints
-│   │   ├── eks/        # EKS cluster + managed nodegroups
-│   │   └── rds/        # RDS MySQL (private subnets)
-│   ├── region-a-ca-central-1/
-│   │   ├── provider.tf
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   └── region-b-us-east-1/
-│       └── ... (CloudFormation templates)
+│ ├── modules/
+│ │ ├── vpc/ # VPC, subnets, route tables, VPC endpoints
+│ │ ├── eks/ # EKS cluster + managed nodegroups
+│ │ └── rds/ # RDS MySQL (private subnets)
+│ ├── region-a-ca-central-1/
+│ │ ├── provider.tf
+│ │ ├── main.tf
+│ │ ├── variables.tf
+│ │ └── outputs.tf
+│ └── region-b-us-east-1/
+│ └── ... (CloudFormation templates)
 ├── k8s/
-│   └── cart/           # Kubernetes manifests for Cart microservice
-├── .github/workflows/  # CI/CD pipelines (GitHub Actions)
+│ └── cart/ # Kubernetes manifests for Cart microservice
+├── .github/workflows/ # CI/CD pipelines (GitHub Actions)
 └── docs/
-    └── architecture.png
+└── architecture.png
 
 ⚙️ Terraform Modules
 🔹 VPC Module
